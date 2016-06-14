@@ -52,7 +52,7 @@ class Filesystem
      * 
      * @param string $directory The directory path
      * @param int $mode Chmod mode
-     * @param type $context Context stream
+     * @param string $context Context stream
      * @return boolean
      * @throws \Exception Throws error on creating a directory
      * @throws \RuntimeException
@@ -105,8 +105,8 @@ class Filesystem
      * Set access time or create a file
      * 
      * @param string $file Filepath
-     * @param type $time Time in seconds (like time() + 3600) Default is current time
-     * @param type $atime Set access time (fileatime)
+     * @param int $time Time in seconds (like time() + 3600) Default is current time
+     * @param int $atime Set access time (fileatime)
      * @throws \RuntimeException Throws not modified a file
      */
     public function touch($file, $time = null, $atime = null)
@@ -169,7 +169,7 @@ class Filesystem
      * Remove a file or directory, remove safe delete to overwrite a file
      * 
      * @param string $path Remove a file or folder
-     * @param type $safedelete Overwrite to a file then delete
+     * @param bool $safedelete Overwrite to a file then delete
      * @throws \RuntimeException
      */
     public function remove($path, $safedelete = false)
@@ -192,8 +192,8 @@ class Filesystem
      * Use copy() by default
      * 
      * @param string $source Source filepath
-     * @param type $destination Destination filepath
-     * @param type $streamCopy Use stream_copy_to_stream() instead copy()
+     * @param string $destination Destination filepath
+     * @param bool $streamCopy Use stream_copy_to_stream() instead copy()
      */
     public function copy($source, $destination, $streamCopy = false)
     {
@@ -768,8 +768,8 @@ class Filesystem
     /**
      * Tells whether the filename is writable
      * 
-     * @param type $filename A filepath
-     * @return boolean Returns is writeable
+     * @param string $filename A filepath
+     * @return bool Returns is writeable
      * @throws RuntimeException Throw exception if is not writeable or exists a file
      */
     public function isWriteable($filename)
@@ -790,7 +790,7 @@ class Filesystem
      * 
      * Instance FilesystemInfo
      * 
-     * @param type $source A filepath
+     * @param string $source A filepath
      * @return Filesysteminfo object
      */
     public function getFileSystemInfo($source)
@@ -1068,7 +1068,7 @@ class Filesystem
      * 
      * Iterate a folder with arrays data as nested-tree
      * 
-     * @param type $directory A directory filepath
+     * @param string $directory A directory filepath
      * @return array Returns as array iterator of directory
      */
     public function getTreeStructure($directory, $depth = 0)
@@ -1105,7 +1105,7 @@ class Filesystem
     /**
      * Return HEX dumps from a file
      * 
-     * @param type $path Filename path
+     * @param string $path Filename path
      * @return array Returns arrays: Hex dumps, od (octal dumps), ASCII
      */
     public function getHexDump($path)
@@ -1151,8 +1151,8 @@ class Filesystem
      * sha1raw - sha1 hash raw binary cheksum (length 20bit)
      * crc32 - polynomial 32bit length
      * 
-     * @param type $filename Filename
-     * @param type $type md5
+     * @param string $filename Filename
+     * @param string $type md5
      * @return boolean|false
      */
     public function getChecksum($filename, $type = 'md5')
@@ -1227,8 +1227,8 @@ class Filesystem
     /**
      * Static method to unlink a file internally
      * 
-     * @param type $file File path
-     * @param type $safedelete Safer remove and overwrite past data
+     * @param string $file File path
+     * @param bool $safedelete Safer remove and overwrite past data
      * @return boolean
      */
     private static function removeFile($file, $safedelete = false)
