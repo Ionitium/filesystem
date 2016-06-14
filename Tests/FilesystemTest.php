@@ -979,5 +979,13 @@ class FilesystemTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('abc', $file->getBasename('http://local.localhost.tld/test/abc'));
         $this->assertEquals('test', $file->getBasename('http://local.localhost.tld/test/abc/test'));
         $this->assertEquals('test?a=1', $file->getBasename('http://local.localhost.tld/test/abc/test/test?a=1'));
+        $this->assertEquals('', $file->getBasename(''));
+        $this->assertEquals('', $file->getBasename('.'));
+        $this->assertEquals('..', $file->getBasename('../'));
+        $this->assertEquals('..', $file->getBasename('../'));
+        $this->assertEquals('.', $file->getBasename('./'));
+        $this->assertEquals('.', $file->getBasename('./'));
+        $this->assertEquals('', $file->getBasename('/'));
+        $this->assertEquals('var1', $file->getBasename('/var/../var1'));
     }
 }

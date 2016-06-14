@@ -1208,13 +1208,19 @@ class Filesystem
      */
     public function getBasename($path)
     {    
+        if (!is_string($path)) {
+            throw new Exception('Invalid path: '.$path);
+        }
+        
         $ds = DIRECTORY_SEPARATOR;
         
-        if (empty($path)) {
+        $path = trim($path);
+        
+        if (empty($path) || $path === '.') {
             return (string)'';
         }
         
-        if ($path === '.' || $path === $ds) {
+        if ($path === $ds) {
             return basename($path);
         }
         

@@ -41,8 +41,6 @@ Quality assurance: Unit tests provided
 
 ## Table of Contents
 
-__See TOC in `docs` directory__
-
-* `mkdir()` - Create a directory
-* `touch()` - Create a file or set access time
-* `touchWithoutOwnerSet()` - Change a file state changed by owner
+* [`mkdir()`](mkdir) - Create a directory
+* [`touch()`](touch) - Create a file or set access time
+* [`touchWithoutOwnerSet()`](docs/touchWithoutOwnerSet) - Change a file state changed by owner
