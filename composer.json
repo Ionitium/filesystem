@@ -1,0 +1,31 @@
+{
+    "name": "ionitium/filesystem",
+    "type": "library",
+    "description": "Ionitium Filesystem",
+    "keywords": [],
+    "homepage": "http://ionitium.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marin Sagovac",
+            "email": "marin@sagovac.com"
+        },
+        {
+            "name": "Ionitium Community",
+            "homepage": "http://ionitium.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "autoload": {
+        "psr-0": { "Ionitium\\Component\\Filesystem\\": "" }
+    },
+    "target-dir": "Ionitium/Component/Filesystem",
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
