@@ -14,7 +14,6 @@ use Ionitium\Filesystem\Filesysteminfo;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use IteratorIterator;
-use RecursiveTreeIterator;
 use DirectoryIterator;
 use Exception;
 
@@ -130,6 +129,8 @@ class Filesystem
         
         if (!$touch) {
             throw new \RuntimeException('Could not change a modification touch a file %s', $file);
+        } else {
+            return true;
         }
     }
     
