@@ -127,6 +127,8 @@ class Filesystem
             $touch = touch($file);
         }
         
+        clearstatcache();
+        
         if (!$touch) {
             throw new \RuntimeException('Could not change a modification touch a file %s', $file);
         } else {
@@ -144,12 +146,13 @@ class Filesystem
     public function touchWithoutOwnerSet($file)
     {
         @exec('touch '.escapeshellarg($file));
+        clearstatcache();
     }
     
     /**
-     * Touch a file using file_put_contents
+     * Touch a file using fopen
      * 
-     * In some case if you can\'t use touch
+     * In some case if you can't use touch
      * 
      * @param string $file File destination
      * @throws \RuntimeException Throws if no files found

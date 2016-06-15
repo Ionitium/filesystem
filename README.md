@@ -46,3 +46,4 @@ __See TOC in `docs` directory__
 * `mkdir()` - Create a directory
 * `touch()` - Create a file or set access time
 * `touchWithoutOwnerSet()` - Change a file state changed by owner
+* `touchAlternate()` - Touch a file using fopen

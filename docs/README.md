@@ -43,4 +43,6 @@ Quality assurance: Unit tests provided
 
 * [`mkdir()`](mkdir.md) - Create a directory
 * [`touch()`](touch.md) - Create a file or set access time
-* [`touchWithoutOwnerSet()`](touchWithoutOwnerSet.md) - Change a file state changed by owner
+* [`touchWithoutOwnerSet()`](touchWithoutOwnerSet.md) - Create a file or set access time
+* [`touchAlternate()`](touchAlternate.md) - Touch a file using fopen
+
