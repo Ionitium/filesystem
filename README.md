@@ -51,3 +51,4 @@ __See TOC in `docs` directory__
 * `copy()` - Copy recursive file and folder
 * `isExists()` - Check if file or directory exists
 * `isExistsAnyFile()` - Check if any file exists in folder recursive or get lists of files
+* `getFiles()` - Get files inside directory non-recursive or recursive

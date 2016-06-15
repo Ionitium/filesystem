@@ -295,7 +295,7 @@ class Filesystem
      * 
      * @param string $directory Set a path of scan directory
      * @param bool $recursive By default is true to search files recursive, false for root scan files only
-     * @return string
+     * @return string|array
      */
     public function getFiles($directory, $recursive = true) {
         

@@ -5,7 +5,7 @@ Check if any file exists in folder recursive or get lists of files or/and return
 ## Description
 
 ```php
-isExistsAnyFile($directory, $return_files = false)
+isExistsAnyFile($directory, $returnFiles = false)
 ```
 
 Returns by filepath recursive find a files, if it exists returns boolean state or get a lists of found files.
