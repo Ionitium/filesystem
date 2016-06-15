@@ -21,9 +21,13 @@ matrix:
   allow_failures:
     - php: 7.0
 
-install:
-    - composer install --no-interaction
+#install:
+#    - composer install  --no-interaction
+
+before_script:
+    - composer self-update
+    - composer install
 
 script:
 #- phpunit -c ./phpunit.xml.dist
-- phpunit -c vendor/bin/phpunit
+- phpunit vendor/bin/phpunit --debug
