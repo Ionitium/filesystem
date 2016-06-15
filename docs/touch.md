@@ -31,8 +31,6 @@ __bool__
 __Exception__
 : Returns Exception when function not created or set up a time
 
-____
-
 ## Examples
 
 Example #1 Basic create a file
@@ -71,4 +69,4 @@ if ($filesystem->touch('/tmp/myfile', time(), time())) {
 
 ## See also
 
-_none_
+_No documents._

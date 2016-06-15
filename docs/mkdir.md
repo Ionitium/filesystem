@@ -32,8 +32,6 @@ __Exception__
 1. `directory` attribute is empty
 2. Error on creating directory
 
-____
-
 ## Examples
 
 Example #1 Basic creating a directory
@@ -71,4 +69,4 @@ if ($filesystem->mkdir('/tmp/myfolder', 511)) {
 
 ## See also
 
-_none_
+_No documents._
