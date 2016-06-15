@@ -1,22 +1,25 @@
-# setChmod
+# setChmodRecursive
 
-Changes file mode
+Changes file mode separate for files and folders
 
 ## Description
 
 ```php
-setChmod($path, $mode, $force = true, $skipOnFalse = false)
+setChmodRecursive($path, $modeFile, $modeDirectory = null, $force = true, $skipOnFalse = false)
 ```
 
-Change a file mode octal, decimal or file type mode. A mode `skipOnFalse` will suppress errors.
+Changes file mode separated by file chmod and directory chmod
 
 ## Parameters
 
 __path__
 : A path of filename
 
-__mode__
-: Chmod decimal `0644`, octal `511` or read/write/execute which contains strings: `drwxsStT-`
+__modefile__
+: Chmod for files only, chmod decimal `0644`, octal `511` or read/write/execute which contains strings: `drwxsStT-`
+
+__modeDirectory__
+: Chmod for directory only
 
 __force__
 : Suppress errors if not chmod made succesfully
@@ -41,7 +44,7 @@ Example #1 Set a CHMOD decimal way
 use Ionitium\Filesystem\Filesystem;
 
 $filesystem = new Filesystem;
-$return = $filesystem->setChmod('/tmp/mypath', 0644);
+$return = $filesystem->setChmodRecursive('/tmp/mypath', 0644);
 if ($return) {
     // Chmod success
 }
@@ -52,7 +55,7 @@ Example #2 Set a CHMOD in octal way
 use Ionitium\Filesystem\Filesystem;
 
 $filesystem = new Filesystem;
-$return = $filesystem->setChmod('/tmp/mypath', 511);
+$return = $filesystem->setChmodRecursive('/tmp/mypath', 511);
 if ($return) {
     // Chmod success
 }
@@ -63,7 +66,7 @@ Example #3 Set a CHMOD in filetype way as 644 decimal way
 use Ionitium\Filesystem\Filesystem;
 
 $filesystem = new Filesystem;
-$return = $filesystem->setChmod('/tmp/mypath', 'drw-r--r--');
+$return = $filesystem->setChmodRecursive('/tmp/mypath', 'drw-r--r--');
 if ($return) {
     // Chmod success
 }
@@ -74,7 +77,7 @@ Example #4 Set a CHMOD and supress on errors
 use Ionitium\Filesystem\Filesystem;
 
 $filesystem = new Filesystem;
-$return = $filesystem->setChmod('/tmp/mypath', 0644, true);
+$return = $filesystem->setChmodRecursive('/tmp/mypath', 0644, true);
 if ($return) {
     // This will always true
 }
@@ -85,7 +88,7 @@ Example #5 Set a CHMOD and supress on errors
 use Ionitium\Filesystem\Filesystem;
 
 $filesystem = new Filesystem;
-$return = $filesystem->setChmod('/tmp/mypath', 0644, false, true);
+$return = $filesystem->setChmodRecursive('/tmp/mypath', 0644, false, true);
 if ($return) {
     // Returns will throw Exception
 }
@@ -97,4 +100,4 @@ if ($return) {
 
 ## See also
 
-* [`setChown()`](setchown.md) - Change file owner
+__No documentation.__

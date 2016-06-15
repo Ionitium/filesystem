@@ -53,3 +53,8 @@ __See TOC in `docs` directory__
 * `isExistsAnyFile()` - Check if any file exists in folder recursive or get lists of files
 * `getFiles()` - Get files inside directory non-recursive or recursive
 * `setChmod()` - Changes file mode
+* `setChmodRecursive()` - Changes file mode separated by file chmod and directory chmod
+* `setChgrp()` - Changes file group
+* `setChown()` - Change file owner
+* `rename()` - Rename a file or folder
+* `getFileOwnerName()` - Return info about a user by user id

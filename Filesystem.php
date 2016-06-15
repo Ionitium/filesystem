@@ -494,10 +494,13 @@ class Filesystem
      * @param string $path Path to the file
      * @param string $user A group name or number
      * @param bool $recursive Recursive set a group
+     * @return bool State of changes
      * @throws \RuntimeException
      */
     public function setChgrp($path, $user, $recursive = false)
     {
+        $state = false;
+        
         if ($recursive)
         {
             $iter = new RecursiveIteratorIterator(
@@ -512,10 +515,13 @@ class Filesystem
                     if (!lchgrp($path, $user)) {
                         throw new Exception(sprintf("Can not change file owner for link %s with user %s", $path, $user));
                     }
+                    $state = true;
+                    
                 } else if ($val->isFile()) {
                     if (!chgrp($path, $user)) {
                         throw new Exception(sprintf("Can not change file owner for file %s with user %s", $path, $user));
                     }
+                    $state = true;
                 }
             }     
         }
@@ -525,28 +531,35 @@ class Filesystem
                 if (!lchgrp($path, $user)) {
                     throw new Exception(sprintf("Can not change file owner for link %s with user %s", $path, $user));
                 }
+                $state = true;
             } else if (is_file($path)) {
                 if (!chgrp($path, $user)) {
                     throw new Exception(sprintf("Can not change file owner for file %s with user %s", $path, $user));
                 }
+                $state = true;
             }
         }
         
         clearstatcache();
+        
+        return $state;
     }
     
     /**
-     * Changes file owner
+     * Change file owner
      * 
      * Change a file owner to filepath
      * 
      * @param string $path Path to the file
      * @param string $user A file owner name or number UID
      * @param bool $recursive Recursive set a group
+     * @return bool State of changes
      * @throws \RuntimeException
      */
     public function setChown($path, $user, $recursive = false)
     {
+        $state = false;
+        
         if ($recursive)
         {
             $iter = new RecursiveIteratorIterator(
@@ -561,10 +574,12 @@ class Filesystem
                     if (!@lchown($path, $user)) {
                         throw new \Exception(sprintf("Can not change file owner for link %s with user %s", $path, $user));
                     }
+                    $state = true;
                 } else if ($val->isFile()) {                    
                     if (!@chown($path, $user)) {
                         throw new \Exception(sprintf("Can not change file owner for file %s with user %s", $path, $user));
                     }
+                    $state = true;
                 }
             }     
         }
@@ -574,12 +589,16 @@ class Filesystem
                 if (!lchown($path, $user)) {
                     throw new Exception(sprintf("Can not change file owner for link %s with user %s", $path, $user));
                 }
+                $state = true;
             } else if (is_file($path)) {
                 if (!chown($path, $user)) {
                     throw new Exception(sprintf("Can not change file owner for file %s with user %s", $path, $user));
                 }
+                $state = true;
             }
         }
+        
+        return $state;
     }
     
     /**
@@ -602,7 +621,7 @@ class Filesystem
      * Return as owner id
      * 
      * @param string $file A pathname
-     * @return bool Returns name of the name 
+     * @return string Returns name of the name 
      */
     public function getFileOwner($file)
     {

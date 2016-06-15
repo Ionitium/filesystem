@@ -49,3 +49,8 @@ Quality assurance: Unit tests provided
 * [`isExistsAnyFile()`](isexistsanyfile.md) - Check if any file exists in folder recursive or get lists of files
 * [`getFiles()`](getfiles.md) - Get files inside directory non-recursive or recursive
 * [`setChmod()`](setchmod.md) - Changes file mode
+* [`setChmodRecursive()`](setchmodrecursive.md) - Changes file mode
+* [`setChgrp()`](setchgrp.md) - Changes file group
+* [`setChown()`](setchown.md) - Change file owner
+* [`rename()`](rename.md) - Rename a file or folder
+* [`getFileOwnerName()`](getfileownername.md) - Return info about a user by user id
