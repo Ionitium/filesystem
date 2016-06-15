@@ -22,8 +22,8 @@ matrix:
     - php: 7.0
 
 install:
-    - travis_retry composer install --no-interaction --ignore-platform-reqs
+    - composer install --no-interaction
 
 script:
 #- phpunit -c ./phpunit.xml.dist
-- phpunit -c ./vendor/bin/phpunit
+- phpunit -c vendor/bin/phpunit
