@@ -30,7 +30,7 @@ $filesystem = new Filesystem;
 $filesystem->getFileOwner('/tmp/myfile');
 ```
 
-Example result:
+Result:
 ```php
 string 'apache'
 ```
