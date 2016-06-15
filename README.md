@@ -47,3 +47,7 @@ __See TOC in `docs` directory__
 * `touch()` - Create a file or set access time
 * `touchWithoutOwnerSet()` - Change a file state changed by owner
 * `touchAlternate()` - Touch a file using fopen
+* `remove()` - Remove a file or folder from path
+* `copy()` - Copy recursive file and folder
+* `isExists()` - Check if file or directory exists
+* `isExistsAnyFile()` - Check if any file exists in folder recursive or get lists of files

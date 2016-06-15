@@ -1,6 +1,6 @@
 # touchWithoutOwnerSet
 
-Create a directory
+Touch a file without change an owner
 
 ## Description
 

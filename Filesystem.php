@@ -255,10 +255,10 @@ class Filesystem
      * Returns bool if exists any files or get an arrays lists files
      * 
      * @param string $directory A root of directory to find a files recursive
-     * @param bool $return_files Show lists of files as array
+     * @param bool $returnFiles Show lists of files as array
      * @return bool|array
      */
-    public function isExistsAnyFile($directory, $return_files = false)
+    public function isExistsAnyFile($directory, $returnFiles = false)
     {
         $lists = array();
         
@@ -268,7 +268,7 @@ class Filesystem
                 foreach (new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory)) as $key=>$val)
                 {
                     if ($val->isFile()) { 
-                        if ($return_files) {
+                        if ($returnFiles) {
                             $lists[] = $val->getPathName();
                         } else {
                             closedir($opendir);
@@ -278,7 +278,7 @@ class Filesystem
                 }
                 closedir($opendir);
                 
-                if ($return_files) {
+                if ($returnFiles) {
                     return $lists;
                 }
             }

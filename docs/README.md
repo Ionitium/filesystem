@@ -37,12 +37,13 @@ Status of core:
 PHP version above `5.3`.
 Quality assurance: Unit tests provided
 
-
-
 ## Table of Contents
 
 * [`mkdir()`](mkdir.md) - Create a directory
 * [`touch()`](touch.md) - Create a file or set access time
 * [`touchWithoutOwnerSet()`](touchWithoutOwnerSet.md) - Create a file or set access time
 * [`touchAlternate()`](touchAlternate.md) - Touch a file using fopen
-
+* [`remove()`](remove.md) - Remove a file or folder from path
+* [`copy()`](copy.md) - Copy recursive file and folder
+* [`isExists()`](isexists.md) - Check if file or directory exists
+* [`isExistsAnyFile()`](isexistsanyfile.md) - Check if any file exists in folder recursive or get lists of files
