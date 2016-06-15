@@ -1,6 +1,6 @@
 # getFiles
 
-Get files inside directory non-recursive or recursive
+Get filenames lists inside directory non-recursive or recursive
 
 ## Description
 

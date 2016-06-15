@@ -371,10 +371,10 @@ class Filesystem
      * Set chmod for a pathname
      * 
      * @param string $path A pathname
-     * @param int $mode Chmod decimal 0666 or octal 511 (0755) or "rwxsSxtT" type
+     * @param int $mode Chmod decimal 0644 or octal 511 (0755) or "rwxsSxtT" type
      * @param bool $force If error chmod supress error
      * @param bool $skipOnFalse If error on chmod don't show error
-     * @return boolean 
+     * @return boolean
      * @throws \RuntimeException
      */
     public function setChmod($path, $mode, $force = true, $skipOnFalse = false)

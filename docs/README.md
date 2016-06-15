@@ -48,3 +48,4 @@ Quality assurance: Unit tests provided
 * [`isExists()`](isexists.md) - Check if file or directory exists
 * [`isExistsAnyFile()`](isexistsanyfile.md) - Check if any file exists in folder recursive or get lists of files
 * [`getFiles()`](getfiles.md) - Get files inside directory non-recursive or recursive
+* [`setChmod()`](setchmod.md) - Changes file mode
