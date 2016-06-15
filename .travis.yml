@@ -25,4 +25,5 @@ install:
     - travis_retry composer install --no-interaction --ignore-platform-reqs
 
 script:
-- phpunit -c ./phpunit.xml.dist
+#- phpunit -c ./phpunit.xml.dist
+- phpunit -c ./vendor/bin/phpunit
