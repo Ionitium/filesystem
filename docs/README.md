@@ -53,4 +53,4 @@ Quality assurance: Unit tests provided
 * [`setChgrp()`](setchgrp.md) - Changes file group
 * [`setChown()`](setchown.md) - Change file owner
 * [`rename()`](rename.md) - Rename a file or folder
-* [`getFileOwnerName()`](getfileownername.md) - Return info about a user by user id
+* [`getFileOwner)`](getfileowner.md) - Return info about a user by user id

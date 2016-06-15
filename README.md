@@ -57,4 +57,4 @@ __See TOC in `docs` directory__
 * `setChgrp()` - Changes file group
 * `setChown()` - Change file owner
 * `rename()` - Rename a file or folder
-* `getFileOwnerName()` - Return info about a user by user id
+* `getFileOwner()` - Return info about a user by user id
