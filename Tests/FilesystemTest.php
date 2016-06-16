@@ -864,6 +864,7 @@ class FilesystemTest extends \PHPUnit_Framework_TestCase
         $file->executeFileInBackground('php '.$path);
         
         $proc = false;
+        var_dump($file->getProcessSnapshot()); exit;
         foreach ($file->getProcessSnapshot() as $pcs)
         {
             if (stristr($pcs, __FUNCTION__))

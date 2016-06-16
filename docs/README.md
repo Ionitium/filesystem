@@ -70,7 +70,9 @@ Quality assurance: Unit tests provided
 * [`createSymbolicLink()`](createsymboliclink.md) - Create a hard link
 * [`getLinkTarget()`](getlinktarget.md) - Returns the target of a symbolic link
 * [`createFileAutoUnique()`](createfileautounique.md) - Create file with unique file name
-* ['createTemporaryFile()`](createtemporaryfile.md) - Creates a temporary file
+* [`createTemporaryFile()`](createtemporaryfile.md) - Creates a temporary file
 * [`readTemporaryFile()`](readtemporaryfile.md) - Read a data from create temporary file
 * [`removeTemporaryFile()`](removetemporaryfile.md) - Close temporary file
 * [`getLinkInfo()`](getlinkinfo.md) - Gets information about a link
+* [`executeFileInBackground()`](executefileinbackground.md) - Execute background process
+* [`getProcessSnapshot()`](getprocesssnapshot.md) - Get a process

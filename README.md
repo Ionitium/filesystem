@@ -78,3 +78,5 @@ __See TOC in `docs` directory__
 * `readTemporaryFile()` - Read a data from create temporary file
 * `removeTemporaryFile()` - Close temporary file
 * `getLinkInfo()` - Gets information about a link
+* `executeFileInBackground()` - Execute background process
+* `getProcessSnapshot()` - Get a process

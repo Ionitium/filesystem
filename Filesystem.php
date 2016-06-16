@@ -1113,6 +1113,7 @@ class Filesystem
             $croninf[] = trim($buffer);
         }
         pclose($fp);
+        
         return $croninf;
     }
     
