@@ -17,8 +17,8 @@ __file__
 
 ## Return values
 
-__string__
-: Returns UID of file owner
+__array__
+: Returns arrays data of owner file
 
 ## Examples
 
@@ -32,7 +32,22 @@ $filesystem->getFileOwner('/tmp/myfile');
 
 Result:
 ```php
-string 'apache'
+array(7) {
+  ["name"]=>
+  string(5) "apache"
+  ["passwd"]=>
+  string(1) "x"
+  ["uid"]=>
+  int(1000)
+  ["gid"]=>
+  int(1000)
+  ["gecos"]=>
+  string(8) "apache,,,"
+  ["dir"]=>
+  string(11) "/home/user"
+  ["shell"]=>
+  string(9) "/bin/bash"
+}
 ```
 
 ## Notes
@@ -41,4 +56,4 @@ _No notes._
 
 ## See also
 
-_No documents._
+* [`getFileOwnerName()`](getfileownername.md) - Return info about a user by user id

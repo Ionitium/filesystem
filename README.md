@@ -58,3 +58,6 @@ __See TOC in `docs` directory__
 * `setChown()` - Change file owner
 * `rename()` - Rename a file or folder
 * `getFileOwner()` - Return info about a user by user id
+* `getFileOwnerName()` - Return info about a user by user id
+* `getLastAccessTime()` - Get last access time of file
+* `readFile()` - Read a file

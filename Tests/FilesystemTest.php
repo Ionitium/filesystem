@@ -527,7 +527,8 @@ class FilesystemTest extends \PHPUnit_Framework_TestCase
         
         // Read with by one length
         file_put_contents($path1, __FUNCTION__);
-        $this->assertEquals(__FUNCTION__, $file->readFile($path1, false, 1));
+        $this->assertEquals(__FUNCTION__, $file->readFile($path1, false, 2));
+        $this->assertEquals('', $file->readFile($path1, false, 1));
         
         // Read binary
         file_put_contents($path1, __FUNCTION__);

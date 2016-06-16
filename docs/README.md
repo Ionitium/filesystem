@@ -54,3 +54,6 @@ Quality assurance: Unit tests provided
 * [`setChown()`](setchown.md) - Change file owner
 * [`rename()`](rename.md) - Rename a file or folder
 * [`getFileOwner()`](getfileowner.md) - Return info about a user by user id
+* [`getFileOwnerName()`](getfileownername.md) - Return info about a user by user id
+* [`getLastAccessTime()`](getlastaccesstime.md) - Get last access time of file
+* [`readFile()`](readfile.md) - Read a file

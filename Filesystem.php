@@ -648,9 +648,9 @@ class Filesystem
     }
     
     /**
-     * Gets last access time of file
+     * Get last access time of file
      * 
-     * Return as unix timestamp
+     * Returns unix timestamp of file access time
      * 
      * @param string $file A pathname
      * @return int Returns unix timestamp
@@ -672,11 +672,11 @@ class Filesystem
      * 
      * @param string $file File path
      * @param bool $binary By default false is not set to binary
-     * @param int $length A length of buffer reading a file, default 4096
+     * @param int $length A length of buffer reading a file, default false
      * @return string Returns a data form a readed file
      * @throws RuntimeException
      */
-    public function readFile($file, $binary = false, $length = 4096)
+    public function readFile($file, $binary = false, $length = false)
     {
         if (is_dir($file)) {
             throw new \RuntimeException(sprintf("Cannot read file should not be folder", $file));
@@ -694,6 +694,10 @@ class Filesystem
             throw new \RuntimeException(sprintf("A file %s can not read", $file));
         }
         
+        if (!is_integer($length) && $length !== false) {
+            throw new \RuntimeException(sprintf('A length "%s" should be integer type', $length));
+        }
+        
         if ($binary) {
             $fp = fopen($file, "rb");
         } else {
@@ -704,9 +708,21 @@ class Filesystem
             throw new \RuntimeException(sprintf("A file cannot open using fopen() %s", $file));
         }
         
-        $curr = false;
-        while (($current_line = fgets($fp)) !== false) {
-            $curr .= $current_line;
+        $curr = false;   
+        
+        if ($length) {
+            
+            if ($length === 1) {
+                return '';
+            }
+            
+            while (($current_line = fgets($fp, $length)) !== false) {
+                $curr .= $current_line;
+            }
+        } else {
+            while (($current_line = fgets($fp)) !== false) {
+                $curr .= $current_line;
+            }
         }
         
         fclose($fp); 
