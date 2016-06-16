@@ -733,6 +733,8 @@ class Filesystem
     /**
      * Prepend a data to a file
      * 
+     * Append a data on top of file
+     * 
      * @param string $file File path
      * @param string $content Content to prepend
      * @param int $buffer Buffer in bytes, default 512 bytes
@@ -761,13 +763,18 @@ class Filesystem
      * 
      * @param string $file File path
      * @param string $content Content to9 append end of file
-     * @param int $buffer Buffer in bytes, default 512 bytes
+     * @param int $buffer Buffer in bytes, default is false
      */
-    public function writeFileAppend($file, $content, $buffer = 512)
+    public function writeFileAppend($file, $content, $buffer = false)
     {
         $fhandle = fopen($file, 'a+');
         
-        fwrite($fhandle, $content);
+        if ($buffer !== false) {
+            fwrite($fhandle, $content, $buffer);
+        } else {
+            fwrite($fhandle, $content);
+        }
+        
         fclose($fhandle);
     }
     

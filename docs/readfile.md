@@ -34,7 +34,7 @@ __string__
 : Returns a string data from readed file
 
 __Exception__
-: Exceptions triggers on directory, link, if not exists a file, if not readable, if is not integer type of legth or false
+: Exceptions triggers if is directory or link, if not exists a file, if not readable, if not  is integer type of length or if is set to true
 
 ## Examples
 
@@ -56,7 +56,7 @@ $fileData = $filesystem->readFile('/tmp/myfile', true);
 echo $fileData;
 ```
 
-Example #2 Reading file binary and change length reading a file to 1024-1 bytes
+Example #3 Reading file binary and change length reading a file to 1024-1 bytes
 ```php
 use Ionitium\Filesystem\Filesystem;
 

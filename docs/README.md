@@ -57,3 +57,5 @@ Quality assurance: Unit tests provided
 * [`getFileOwnerName()`](getfileownername.md) - Return info about a user by user id
 * [`getLastAccessTime()`](getlastaccesstime.md) - Get last access time of file
 * [`readFile()`](readfile.md) - Read a file
+* [`writeFilePrepend()`](writefileprepend.md) - Prepend a data to a file
+* [`writeFileAppend()`](writefileappend.md) - Append a data to a file

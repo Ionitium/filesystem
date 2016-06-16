@@ -61,3 +61,5 @@ __See TOC in `docs` directory__
 * `getFileOwnerName()` - Return info about a user by user id
 * `getLastAccessTime()` - Get last access time of file
 * `readFile()` - Read a file
+* `writeFilePrepend()` - Prepend a data to a file
+* `writeFileAppend()` - Append a data to a file
