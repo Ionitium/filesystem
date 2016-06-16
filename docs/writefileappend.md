@@ -16,7 +16,7 @@ __file__
 : Filename path
 
 __content__
-: A dato to add on top of file
+: A data to add on top of file
   
 __buffer__
 : A buffer when writing a file. If specified it will stop to specified length in bytes.

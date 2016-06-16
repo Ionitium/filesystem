@@ -63,3 +63,4 @@ __See TOC in `docs` directory__
 * `readFile()` - Read a file
 * `writeFilePrepend()` - Prepend a data to a file
 * `writeFileAppend()` - Append a data to a file
+* `writeFile()` - Write a new file, overwrite if exists

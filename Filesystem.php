@@ -785,13 +785,18 @@ class Filesystem
      * 
      * @param string $file File path
      * @param string $content Content
-     * @param int $buffer Buffer in bytes, default 512 bytes
+     * @param int $buffer Buffer in bytes, default is false
      */
-    public function writeFile($file, $content, $buffer = 512)
+    public function writeFile($file, $content, $buffer = false)
     {
         $fhandle = fopen($file, 'c');
         
-        fwrite($fhandle, $content);
+        if (!$buffer) {
+            fwrite($fhandle, $content);
+        } else {
+            fwrite($fhandle, $content, strlen($content));
+        }
+        
         fclose($fhandle);
     }
     

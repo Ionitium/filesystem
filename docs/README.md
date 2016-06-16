@@ -59,3 +59,4 @@ Quality assurance: Unit tests provided
 * [`readFile()`](readfile.md) - Read a file
 * [`writeFilePrepend()`](writefileprepend.md) - Prepend a data to a file
 * [`writeFileAppend()`](writefileappend.md) - Append a data to a file
+* [`writeFile()`](writefile.md) - Write a new file, overwrite if exists
