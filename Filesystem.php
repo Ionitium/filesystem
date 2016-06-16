@@ -819,6 +819,8 @@ class Filesystem
     /**
      * Tells whether the filename is writable
      * 
+     * Check if file exists and if a file is writeable
+     * 
      * @param string $filename A filepath
      * @return bool Returns is writeable
      * @throws RuntimeException Throw exception if is not writeable or exists a file
@@ -879,7 +881,7 @@ class Filesystem
             throw new \Exception(sprintf('No file exists %s', $file));
         }
         
-        $handle = fopen($file, 'r+');
+        $handle = fopen($file, 'w');
         ftruncate($handle, 0);
         fclose($handle);
     }
@@ -977,7 +979,7 @@ class Filesystem
      * Create file with unique file name
      * 
      * Create a temporary file automatically into temporary directory with/without content.
-     * Can be setup a prefix into filename of temporary file
+     * Can be set a prefix into filename temporary file.
      * 
      * @param string $directory Directory to crate temporary path, if not set use sys_get_temp_dir like "/tmp"
      * @param string $prefix The prefix generated in filename
@@ -1029,7 +1031,7 @@ class Filesystem
      * Use createTemporaryFile() to create a file
      * 
      * @param resource $resource A resource from createTemporaryFile()
-     * @return resource Return a resource
+     * @return string Return a content from file
      */
     public function readTemporaryFile($resource)
     {

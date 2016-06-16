@@ -64,3 +64,17 @@ __See TOC in `docs` directory__
 * `writeFilePrepend()` - Prepend a data to a file
 * `writeFileAppend()` - Append a data to a file
 * `writeFile()` - Write a new file, overwrite if exists
+* `createFileAndClose()` - Create a non-exists file then close
+* `isWriteable()` - Tells whether the filename is writable
+* `getGuid()` - Generate 128 bits of random data
+* `emptyFile()` - Truncate a file
+* `isSymbolicLink()` - Tells whether the filename is a symbolic link
+* `uploadFile()` - Moves an uploaded file to a new location
+* `createHardLink()` - Create a hard link
+* `createSymbolicLink()` - Creates a symbolic link
+* `getLinkTarget()` - Returns the target of a symbolic link
+* `createFileAutoUnique()` - Create file with unique file name
+* `createTemporaryFile()` - Creates a temporary file
+* `readTemporaryFile()` - Read a data from create temporary file
+* `removeTemporaryFile()` - Close temporary file
+* `getLinkInfo()` - Gets information about a link

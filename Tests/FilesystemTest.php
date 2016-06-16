@@ -841,6 +841,7 @@ class FilesystemTest extends \PHPUnit_Framework_TestCase
         $file->createSymbolicLink($path1, $path2);
         
         $this->assertEquals(true, is_link($path2));
+        
         $this->assertEquals(2049, $file->getLinkInfo($path1));
     }
     

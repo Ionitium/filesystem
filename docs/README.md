@@ -60,3 +60,17 @@ Quality assurance: Unit tests provided
 * [`writeFilePrepend()`](writefileprepend.md) - Prepend a data to a file
 * [`writeFileAppend()`](writefileappend.md) - Append a data to a file
 * [`writeFile()`](writefile.md) - Write a new file, overwrite if exists
+* [`createFileAndClose()`](createfileandclose.md) - Create a non-exists file then close
+* [`isWriteable()`](iswriteable.md) - Tells whether the filename is writable
+* [`getGuid()`](getguid.md) - Generate 128 bits of random data
+* [`emptyFile()`](emptyfile.md) - Truncate a file
+* [`isSymbolicLink()`](issymboliclink.md) - Tells whether the filename is a symbolic link
+* [`uploadFile()`](uploadfile.md) - Moves an uploaded file to a new location
+* [`createHardLink()`](createhardlink.md) - Create a hard link
+* [`createSymbolicLink()`](createsymboliclink.md) - Create a hard link
+* [`getLinkTarget()`](getlinktarget.md) - Returns the target of a symbolic link
+* [`createFileAutoUnique()`](createfileautounique.md) - Create file with unique file name
+* ['createTemporaryFile()`](createtemporaryfile.md) - Creates a temporary file
+* [`readTemporaryFile()`](readtemporaryfile.md) - Read a data from create temporary file
+* [`removeTemporaryFile()`](removetemporaryfile.md) - Close temporary file
+* [`getLinkInfo()`](getlinkinfo.md) - Gets information about a link

@@ -1,0 +1,48 @@
+# createHardLink
+
+Create a hard link
+
+## Description
+
+```php
+createHardLink($source, $target)
+```
+
+Create identically link from source. linkinfo() returns 2049 link state
+
+## Parameters
+
+__source__
+: A path of filename source
+
+__target__
+: A path of destination file to create link
+
+## Return values
+
+__boolean__
+: Returns if created to target filename
+
+__Exceptions__
+: Returns if is directory or is not a file
+
+## Examples
+
+Example #1 Create a hard link
+```php
+use Ionitium\Filesystem\Filesystem;
+
+$filesystem = new Filesystem;
+$hardlink = $filesystem->createHardLink('/tmp/sourcehardlink', '/tmp/targethardlink');
+if ($hardlink) {
+    // Moved a file successfully
+}
+```
+
+## Notes
+
+> It uses internally `link()` function.
+
+## See also
+
+__No documentation.__
