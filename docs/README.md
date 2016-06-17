@@ -87,3 +87,25 @@ Quality assurance: Unit tests provided
 ### FilesystemInfo
 
 * [`getStatRaw()`](getstatraw.md) - Gives information about a file
+* [`getLastAccess()`](getlastaccess.md) - Gets last access time of file
+* [`getLastModification()`](getlastmodification.md) - Gets last modification time of file
+* [`getLastChanged()`](getlastchanged.md) - Gets inode change time of file, marks of last time
+* [`getFileInode()`](getfileinode.md) - Gets file inode
+* [`getFileOwner()`](getfileowner2.md) - Gets file owner
+* [`getFilePermission()`](getfilepermission.md) - Gets file permissions
+* [`getFileSize()`](getfilesize.md) - Get file size
+* [`getFileType()`](getfiletype.md) - Gets file type
+* [`getHumanFileSize()`](gethumanfilesize.md) - Get human readable filesize
+* [`getFileGroup()`](getfilegroup.md) - Gets file group
+* [`getCountLines()`](getcountlines.md) - Counts number lines of code
+* [`getDiskFreeSpace()`](getdiskfreespace.md) - Returns available space on filesystem or disk partition
+* [`getDiskTotalSpace()`](getdisktotalspace.md) - Returns the total size of a filesystem or disk partition
+* [`getDiskTotalUsage()`](getdisktotalusage.md) - Returns the total usage of disk filesystem
+* [`getPathInfo()`](getpathinfo.md) - Returns information about a file path
+* [`getMime()`](getmime.md) - Return the mime type and encoding
+* [`getMimeType()`](getmimetype.md) - Return the mime type
+* [`getMimeEncoding()`](getmimeencoding.md) - Return the mime encoding
+* [`getMimeContentType()`](getmimecontenttype.md) - Detect MIME Content-type for a file
+* [`getInfoNone()`](getinfonone.md) - Returns mime info global
+* [`getInfoDevices()`](getinfodevices.md) - Return information about a file
+* [`getInfoRaw()`](getinforaw.md) - Returns raw information of file

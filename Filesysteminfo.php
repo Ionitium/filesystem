@@ -96,7 +96,7 @@ class Filesysteminfo
     /**
      * Gets last access time of file
      * 
-     * Returns the unitimestamp the file was last accessed
+     * Returns the unix timestamp the file was last accessed
      * Costly for very large of files
      * Time resolution may differ from one file system to another
      * 
@@ -173,8 +173,10 @@ class Filesysteminfo
     /**
      * Gets file owner
      * 
-     * @return int user ID
-     * @throws Exception
+     * Returns file owner by user ID
+     * 
+     * @return int user ID owner file
+     * @throws Exception Exception if file not found
      */
     public function getFileOwner($details = false, $key = '')
     {
@@ -338,7 +340,9 @@ class Filesysteminfo
     }
     
     /**
-     * Get Human filesize resolver
+     * Get human readable filesize
+     * 
+     * Get a human readable file size in decimals size or result as array
      * 
      * @param int $bytes A value on bytes
      * @param int $decimals A decimal point
@@ -516,7 +520,7 @@ class Filesysteminfo
     }
     
     /**
-     * Return the mime type
+     * Return the mime type and encoding
      * 
      * Returns mime type and mime encoding type specified by RFC 2045
      * 

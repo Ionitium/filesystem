@@ -91,3 +91,25 @@ __See TOC in `docs` directory__
 ### FilesystemInfo
 
 * `getStatRaw()` - Gives information about a file
+* `getLastAccess()` - Gets last access time of file
+* `getLastModification()` - Gets last modification time of file
+* `getLastChanged()` - Gets inode change time of file, marks of last time
+* `getFileInode()` - Gets file inode
+* `getFileOwner()` - Gets file owner
+* `getFilePermission()` - Gets file permissions
+* `getFileSize()` - Get file size
+* `getFileType()` - Gets file type
+* `getHumanFileSize()` - Get human readable filesize
+* `getFileGroup()` - Gets file group
+* `getCountLines()` - Counts number lines of code
+* `getDiskFreeSpace()` - Returns available space on filesystem or disk partition
+* `getDiskTotalSpace()` - Returns the total size of a filesystem or disk partition
+* `getDiskTotalUsage()` - Returns the total usage of disk filesystem
+* `getPathInfo()` - Returns information about a file path
+* `getMime()` - Return the mime type and encoding
+* `getMimeType()` - Return the mime type
+* `getMimeEncoding()` - Return the mime encoding
+* `getMimeContentType()` - Detect MIME Content-type for a file
+* `getInfoNone()` - Returns mime info global
+* `getInfoDevices()` - Return information about a file
+* `getInfoRaw()` - Returns raw information of file

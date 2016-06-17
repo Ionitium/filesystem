@@ -1,14 +1,14 @@
-# getLastAccessTime
+# getLastChanged
 
-Get last access time of file
+Gets inode change time of file, marks of last time
 
 ## Description
 
 ```php
-getLastAccessTime($file)
+getLastChanged($file)
 ```
 
-Returns unix timestamp of file access time. Returns `stat` information from __posix__.
+Returns unix timestamp of last access timestamp. Affects on file permission changes.
 
 ## Parameters
 
@@ -29,7 +29,7 @@ Example #1 Get a last access time for a file
 use Ionitium\Filesystem\Filesystem;
 
 $filesystem = new Filesystem;
-$filesystem->getLastAccessTime('/tmp/myfile');
+$filesystem->getLastChanged('/tmp/myfile');
 ```
 
 Result:
@@ -39,7 +39,7 @@ int(1466085246)
 
 ## Notes
 
-_No notes._
+> Useful for javascript in query `?=time` changes. Use `getLastModification()` to get most suitable for changes in a files.
 
 ## See also
 
