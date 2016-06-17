@@ -86,3 +86,4 @@ Quality assurance: Unit tests provided
 
 ### FilesystemInfo
 
+* [`getStatRaw()`](getstatraw.md) - Gives information about a file

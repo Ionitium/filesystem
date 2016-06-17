@@ -90,3 +90,4 @@ __See TOC in `docs` directory__
 
 ### FilesystemInfo
 
+* `getStatRaw()` - Gives information about a file
