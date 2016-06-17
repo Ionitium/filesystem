@@ -1197,7 +1197,7 @@ class Filesystem
     }
     
     /**
-     * Get cheksum of file
+     * Get checksum of file
      * 
      * List of type attributes:
      * md5 - md5 cheksum hash (alternative is md5sum unix command) (length 32bit)
@@ -1243,7 +1243,7 @@ class Filesystem
     }
     
     /**
-     * Returns an array with the names of included or required files
+     * Get a lists of included files
      * 
      * Returns array of names from include()/require()/include_once()/require_once()
      * 

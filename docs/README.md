@@ -39,6 +39,8 @@ Quality assurance: Unit tests provided
 
 ## Table of Contents
 
+### Filesystem
+
 * [`mkdir()`](mkdir.md) - Create a directory
 * [`touch()`](touch.md) - Create a file or set access time
 * [`touchWithoutOwnerSet()`](touchWithoutOwnerSet.md) - Create a file or set access time
@@ -78,3 +80,9 @@ Quality assurance: Unit tests provided
 * [`getProcessSnapshot()`](getprocesssnapshot.md) - Get a process
 * [`getTreeStructure()`](gettreestructure.md) - Get tree structure of file
 * [`getHexDump()`](gethexdump.md) - Returns hexadecimal dumps from a file
+* [`getChecksum()`](getchecksum.md) - Get checksum of file
+* [`getIncludedFiles()`](getincludedfiles.md) - Get a lists of included files
+* [`getBasename()`](getbasename.md) - Get basename of the path
+
+### FilesystemInfo
+

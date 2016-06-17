@@ -43,6 +43,8 @@ Quality assurance: Unit tests provided
 
 __See TOC in `docs` directory__
 
+### Filesystem
+
 * `mkdir()` - Create a directory
 * `touch()` - Create a file or set access time
 * `touchWithoutOwnerSet()` - Change a file state changed by owner
@@ -82,3 +84,9 @@ __See TOC in `docs` directory__
 * `getProcessSnapshot()` - Get a process
 * `getTreeStructure()` - Get tree structure of file
 * `getHexDump()` - Returns hexadecimal dumps from a file
+* `getHexDump()` - Get checksum of file
+* `getIncludedFiles()` - Get a lists of included files
+* `getBasename()` - Get basename of the path
+
+### FilesystemInfo
+
