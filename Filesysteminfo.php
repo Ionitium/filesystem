@@ -206,7 +206,7 @@ class Filesysteminfo
     
     /**
      * Gets file permissions
-     * 
+     * w
      * Show file permission in octal by default, 'full' is hexadecimal
      * 
      * @param octal|full $type A type of chmod

@@ -1,59 +1,57 @@
-# getFileOwner
+# getFilePermission
 
-Return info about a user by user id
+Gets file permissions
 
 ## Description
 
 ```php
-getFileOwner($file)
+getFilePermission($type = 'octal')
 ```
 
-Returns user id for file. Returns `stat` information from __posix__.
+Returns file permission in octal by default or hexadecimal
 
 ## Parameters
 
-__file__
-: A filename source
+__type__
+: Use `octal` as default to get octal value or `full` to get `rwxsStT-` form.
 
 ## Return values
 
-__array__
-: Returns arrays data of owner file
+__string__ or __octal__
+: Return file permission value
 
 ## Examples
 
-Example #1 Get a UID file
+Example #1 Get an octal value
 ```php
-use Ionitium\Filesystem\Filesystem;
+use Ionitium\Filesystem\FilesystemInfo;
 
-$filesystem = new Filesystem;
-$filesystem->getFileOwner('/tmp/myfile');
+$filesystem = new FilesystemInfo('/tmp/myfile');
+echo $filesystem->getFilePermission();
 ```
 
 Result:
 ```php
-array(7) {
-  ["name"]=>
-  string(5) "apache"
-  ["passwd"]=>
-  string(1) "x"
-  ["uid"]=>
-  int(1000)
-  ["gid"]=>
-  int(1000)
-  ["gecos"]=>
-  string(8) "apache,,,"
-  ["dir"]=>
-  string(11) "/home/user"
-  ["shell"]=>
-  string(9) "/bin/bash"
-}
+int(3) 666
+```
+
+Example #2 Get an `rwx` form value
+```php
+use Ionitium\Filesystem\FilesystemInfo;
+
+$filesystem = new FilesystemInfo('/tmp/myfile');
+echo $filesystem->getFilePermission('full');
+```
+
+Result:
+```php
+int(3) '-rw-rw-rw-'
 ```
 
 ## Notes
 
-_No notes._
+> It uses `clearstatcache()` to get updated filesystem information.
 
 ## See also
 
-* [`getFileOwnerName()`](getfileownername.md) - Return info about a user by user id
+_No documentation._

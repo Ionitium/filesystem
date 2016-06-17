@@ -53,7 +53,7 @@ class FilesystemInfoTest extends \PHPUnit_Framework_TestCase
     public function testGetStatRaw()
     {
         $stat = $this->filesystemInfo->getStatRaw();
-        var_dump($stat); exit;
+        
         $this->assertEquals(true, isset($stat['dev']));
         
         $this->assertEquals($stat['dev'], $this->filesystemInfo->getStatRaw('dev'));
