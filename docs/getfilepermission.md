@@ -45,7 +45,7 @@ echo $filesystem->getFilePermission('full');
 
 Result:
 ```php
-int(3) '-rw-rw-rw-'
+string(10) '-rw-rw-rw-'
 ```
 
 ## Notes

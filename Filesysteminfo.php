@@ -285,20 +285,20 @@ class Filesysteminfo
      * 
      * @param bool $humanSize Show readbale filesize, default false
      * @param int $decimals Decimal separator, default 2
-     * @param bool $array_print Print as array, default is print as string
+     * @param bool $arrayPrint Print as array, default is print as string
      * @return string|array Return result
      * @throws Exception Throws if no file found
      */
-    public function getFileSize($humanSize = false, $decimals = 2, $array_print = false)
-    {
-        clearstatcache();
-        
+    public function getFileSize($humanSize = false, $decimals = 2, $arrayPrint = false)
+    {        
         if (!file_exists($this->source)) {
             throw new Exception(sprintf("No file is defined"));
         }
         
+        clearstatcache();
+        
         if ($humanSize) {
-            return $this->getHumanFileSize(filesize($this->source), $decimals, $array_print);
+            return $this->getHumanFileSize(filesize($this->source), $decimals, $arrayPrint);
         } else {
             return filesize($this->source);
         }
