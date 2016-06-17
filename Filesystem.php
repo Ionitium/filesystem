@@ -1118,7 +1118,7 @@ class Filesystem
     }
     
     /**
-     * Get tree structre of file
+     * Get tree structure of file
      * 
      * Iterate a folder with arrays data as nested-tree
      * 
@@ -1157,7 +1157,9 @@ class Filesystem
     }
     
     /**
-     * Return HEX dumps from a file
+     * Returns hexadecimal dumps from a file
+     * 
+     * Returns binary and hex data from a file
      * 
      * @param string $path Filename path
      * @return array Returns arrays: Hex dumps, od (octal dumps), ASCII
@@ -1171,7 +1173,7 @@ class Filesystem
         }
         
         $n = 0;
-        $h = array('00000000'.PHP_EOL,'','');
+        $h = array('00000000','','');
         $len = strlen($c);
         for ($i=0; $i<$len; ++$i) {
                 $h[1] .= sprintf('%02X',ord($c[$i])).' ';
@@ -1206,8 +1208,8 @@ class Filesystem
      * crc32 - polynomial 32bit length
      * 
      * @param string $filename Filename
-     * @param string $type md5
-     * @return boolean|false
+     * @param string $type md5 Hash type
+     * @return boolean|string Returns result of hash by filename
      */
     public function getChecksum($filename, $type = 'md5')
     {

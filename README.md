@@ -80,3 +80,5 @@ __See TOC in `docs` directory__
 * `getLinkInfo()` - Gets information about a link
 * `executeFileInBackground()` - Execute background process
 * `getProcessSnapshot()` - Get a process
+* `getTreeStructure()` - Get tree structure of file
+* `getHexDump()` - Returns hexadecimal dumps from a file

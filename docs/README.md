@@ -76,3 +76,5 @@ Quality assurance: Unit tests provided
 * [`getLinkInfo()`](getlinkinfo.md) - Gets information about a link
 * [`executeFileInBackground()`](executefileinbackground.md) - Execute background process
 * [`getProcessSnapshot()`](getprocesssnapshot.md) - Get a process
+* [`getTreeStructure()`](gettreestructure.md) - Get tree structure of file
+* [`getHexDump()`](gethexdump.md) - Returns hexadecimal dumps from a file
