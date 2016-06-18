@@ -356,7 +356,7 @@ class Filesysteminfo
             throw new Exception(sprintf("No filesize is defined"));
         }
         
-        $size = array('B','kB','MB','GB','TB','PB','EB','ZB','YB');
+        $size = array('B','KiB','MiB','GiB','TiB','PiB','EiB','ZiB','YiB');
         $factor = floor((strlen($bytes) - 1) / 3);
         
         if ($array_print) {

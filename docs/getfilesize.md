@@ -13,26 +13,25 @@ Returns filesize in bytes. For defined `humanSize` it will return in decimals an
 ## Parameters
 
 __humanSize__
-: Returns filesize in readable format (`1 kB`)
+: Returns filesize in readable format (`1 KiB`)
 : Default: `FALSE`
 
 __decimals__
 : If humanSize defined, it will returns in decimal separator
-: Default: `2` (`2.00 kB`)
+: Default: `2` (`2.00 KiB`)
 
 __arrayPrint__
-: Return result as array (`2.00` / `kB`)
+: Return result as array (`2.00` / `KiB`)
 : Default: `FALSE`
 
 ## Return values
 
-Returns filesize in bytes if `humanSize` se to `false` by default.
+Returns filesize in bytes if `humanSize` set to `false` by default.
 
 > If `humanSize` set to `TRUE` it will return in decimal separators.
-> If `arrayPrint` set with `humanSize` to `true` it will return as array as `2.00` as value and filesize type as `kB`.
+> If `arrayPrint` set with `humanSize` to `true` it will return as array as `2.00` as value and filesize type as `KiB`.
 
 __Exception__
-
 : Returns if file not defined.
 
 ## Examples
@@ -69,7 +68,7 @@ array(
 )
 ```
 
-Example #3 Get a filesize in humanSize with 3 decimals and separated size and filesize type
+Example #4 Get a filesize in humanSize with 3 decimals and separated size and filesize type
 ```php
 use Ionitium\Filesystem\FilesystemInfo;
 
