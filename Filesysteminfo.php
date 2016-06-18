@@ -541,7 +541,7 @@ class Filesysteminfo
      * 
      * Returns mime type
      * 
-     * @return string Retruns mime type
+     * @return string Returns mime type
      * @throws Exception If not file defined throws exception
      */
     public function getMimeType()
