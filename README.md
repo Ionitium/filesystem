@@ -7,7 +7,6 @@ The `Filesystem` provides manage, access and retrieve information of file
 1. Installation via [Composer](http://www.composer.org) on [Packagist](http://www.packagist.com)
 2. Installation using [Git](http://www.github.com) GIT clone component
 
-
 ## Prerequisities
 
 PHP version requirements: _PHP >5.3_
@@ -25,7 +24,6 @@ if ($filesystem->mkdir('/tmp/myfolder')) {
 }
 ```
 
-
 ## Changelog
 
 Status of core:
@@ -36,8 +34,6 @@ Status of core:
 
 PHP version above `5.3`.
 Quality assurance: Unit tests provided
-
-
 
 ## Table of Contents
 
