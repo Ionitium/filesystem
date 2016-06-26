@@ -24,7 +24,7 @@ use Exception;
  * @todo ini set file upload
  * @version 1.0.0
  */
-class Filesystem 
+class Filesystem
 {
     const UPLOAD_ERR_OK = 0;
     const UPLOAD_ERR_INI_SIZE = 1;
@@ -1252,6 +1252,77 @@ class Filesystem
     public function getIncludedFiles()
     {
         return get_included_files();
+    }
+    
+    /**
+     * Returns string from a file to specified line of file
+     * 
+     * Returns string from read file at specified line and range of below and below code
+     * 
+     * @link http://php.net/manual/en/function.fseek.php#119511 PHP.net seek reference
+     * @param string $source A filename source path
+     * @param int $linenum Seek at line (Started at 0)
+     * @param int $range Show lines above and below of current line by linenum
+     * @return string Return data from file at specified line
+     */
+    public function readFileSeek($source, $linenum = 0, $range = 0)
+    {
+        $fh = fopen($source, 'r');
+        $meta = stream_get_meta_data($fh);
+        
+        if (!$meta['seekable']) {
+            throw new Exception(sprintf("A source is not seekable: %s", print_r($source, true)));
+        }
+        
+        $pos = 2;
+        $result = null;
+        
+        if ($linenum) {
+            $minline = $linenum - $range - 1;
+            $maxline = $minline+$range+$range;
+        }
+        
+        $totalLines = 0;
+        while (!feof($fh)) {
+        
+            $char = fgetc($fh);
+            
+            if ($char == "\n" || $char == "\r") {
+                ++$totalLines;
+            } else {
+                $result[$totalLines] = $pos;   
+            }
+            $pos++;
+            
+            if ($maxline+1 == $totalLines) {
+                // break from while to not read entire file
+                break;
+            }
+        }
+        
+        $buffer = '';
+        
+        for ($nr=$minline; $nr<=$maxline; $nr++) {
+            
+            if (isset($result[$nr])) {
+            
+                fseek($fh, $result[$nr], SEEK_SET);
+
+                while (!feof($fh)) {
+                    $char = fgetc($fh);
+
+                    if ($char == "\n" || $char == "\r") {
+                        $buffer .= $char;
+                        break;
+                    } else {
+                        $buffer .= $char;
+                    }
+                }
+            
+            }
+        }
+        
+        return $buffer;
     }
     
     /**

@@ -83,6 +83,7 @@ __See TOC in `docs` directory__
 * `getHexDump()` - Get checksum of file
 * `getIncludedFiles()` - Get a lists of included files
 * `getBasename()` - Get basename of the path
+* `readFileSeek()` - Returns string from read file at specified line
 
 ### FilesystemInfo
 

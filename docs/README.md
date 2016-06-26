@@ -83,6 +83,7 @@ Quality assurance: Unit tests provided
 * [`getChecksum()`](getchecksum.md) - Get checksum of file
 * [`getIncludedFiles()`](getincludedfiles.md) - Get a lists of included files
 * [`getBasename()`](getbasename.md) - Get basename of the path
+* [`readFileSeek()`](readfileseek.md) - Returns string from read file at specified line
 
 ### FilesystemInfo
 

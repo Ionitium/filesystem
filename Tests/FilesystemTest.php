@@ -991,4 +991,30 @@ class FilesystemTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('', $file->getBasename('/'));
         $this->assertEquals('var1', $file->getBasename('/var/../var1'));
     }
+    
+    /**
+     * @test
+     */
+    public function testReadSourceLines()
+    {
+        $file = new Filesystem;
+        
+        $dir = static::getTempPath(__FUNCTION__);
+        mkdir($dir);
+        $filename = rand(1,10).rand(0, getrandmax());
+        
+        $path = $dir.DIRECTORY_SEPARATOR.$filename;
+        touch($path);
+        
+        $input = null;
+        for ($i=0; $i<=100; $i++) {
+            $input .= $i.'_abc';
+            $input .= PHP_EOL;
+        }
+        
+        file_put_contents($path, $input);
+        
+        $expect = "13_abc\n14_abc\n15_abc\n16_abc\n17_abc\n";
+        $this->assertEquals($expect, $file->readFileSeek($path, 15, 2));
+    }
 }
