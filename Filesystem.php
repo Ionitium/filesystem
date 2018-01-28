@@ -1289,15 +1289,16 @@ class Filesystem
             
             if ($char == "\n" || $char == "\r") {
                 ++$totalLines;
-            } else {
-                $result[$totalLines] = $pos;   
             }
+            
+            $result[$totalLines] = $pos;
             $pos++;
             
             if ($maxline+1 == $totalLines) {
                 // break from while to not read entire file
                 break;
             }
+            
         }
         
         $buffer = '';
@@ -1307,17 +1308,22 @@ class Filesystem
             if (isset($result[$nr])) {
             
                 fseek($fh, $result[$nr], SEEK_SET);
-
+                
                 while (!feof($fh)) {
                     $char = fgetc($fh);
-
+                    
                     if ($char == "\n" || $char == "\r") {
                         $buffer .= $char;
                         break;
+                        
                     } else {
                         $buffer .= $char;
                     }
+                    
+                    
                 }
+                
+                
             
             }
         }
