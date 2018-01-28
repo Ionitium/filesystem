@@ -7,10 +7,11 @@ The `Filesystem` provides manage, access and retrieve information of file
 1. Installation via [Composer](http://www.composer.org) on [Packagist](http://www.packagist.com)
 2. Installation using [Git](http://www.github.com) GIT clone component
 
-
 ## Prerequisities
 
 PHP version requirements: _PHP >5.3_
+
+PHP package requiremenets: php-xml or specified version (php5.6-xml, php7.0-xml, php7.1-xml)
 
 Add `use Ionitium\Filesystem\Filesystem` declaration into required vendor package.
 
@@ -25,14 +26,14 @@ if ($filesystem->mkdir('/tmp/myfolder')) {
 }
 ```
 
-
 ## Changelog
 
 Status of core:
 
-| Version       | State                |
-| ------------- |:-------------------- |
-| `1.0`         | Release version      |
+| Version       | State                      |
+| ------------- |:-------------------------- |
+| `1.1`         | Work with PHP 5.6/7.0/7.1  |
+| `1.0`         | Release version            |
 
 PHP version above `5.3`.
 Quality assurance: Unit tests provided
